@@ -2,7 +2,7 @@ package org.launchcode.main;
 
 import java.util.Scanner;
 
-public class Main {
+public class Lecture {
 
 	public static void main(String[] args) throws CloneNotSupportedException {
 
