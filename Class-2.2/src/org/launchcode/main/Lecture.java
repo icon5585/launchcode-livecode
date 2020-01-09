@@ -3,6 +3,7 @@ package org.launchcode.main;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -15,13 +16,13 @@ public class Lecture {
 	 */
 	public static void main(String[] args) {
 		// 3.1 - condititionals
-		section31conditionals();
+		//section31conditionals();
 
 		// 3.2 - loops
-		section32loops();
+		//section32loops();
 
 		// 3.4 - arraylist
-		section34arrayList();
+		//section34arrayList();
 
 		// 3.6 - hashmap
 		section36hashMap();
@@ -58,8 +59,6 @@ public class Lecture {
 		else
 			System.out.println('A');
 
-		// always make sure to close your scanners :)
-		in.close();
 
 		System.out.println("3.1.4. switch Statements");
 		/*
@@ -130,6 +129,9 @@ public class Lecture {
 
 		// No matter what value you put in, you will always end up in the default case
 		// if you don't add the break!
+		
+		// always make sure to close your scanners :)
+		in.close();
 	}
 
 	/**
@@ -177,7 +179,7 @@ public class Lecture {
 		// Evaluated at end
 		int j = 0;
 		do {
-			System.out.println(i);
+			System.out.println(j);
 			j++;
 		} while (j < 3);
 
@@ -189,6 +191,16 @@ public class Lecture {
 
 		int[] someInts = { 1, 10, 2, 3, 5, 8, 10 };
 		int searchTerm = 10;
+		
+		// Search and replace (find 10, replace with 50)
+		/*
+		for(int k=0; k < someInts.length; k++) {
+			if (someInts[k] == searchTerm) {
+				someInts[k] = 50;
+			}
+		}
+		*/
+		
 		for (int oneInt : someInts) {
 			if (oneInt == searchTerm) {
 				System.out.println("Found it!");
@@ -219,11 +231,11 @@ public class Lecture {
 		// Like arrays, arraylists must have a type (yay type safe languages)
 		// We declare the type in angle brackets <>
 		// The students names in this arraylist are stored using strings
-		ArrayList<String> students = new ArrayList<>();
+		List<String> students = new ArrayList<>();
 
 		// The students grades in this arraylist are stored using doubles
 		// Note: You can only store objects in arraylists, not primitives :(
-		ArrayList<Double> grades = new ArrayList<>();
+		List<Double> grades = new ArrayList<>();
 
 		System.out.println("3.4.1. ArrayList Iteration");
 		System.out.println("3.4.1.1. do-while");
@@ -337,8 +349,8 @@ public class Lecture {
 
 		// You can also just get the keys or just the values using the keyset and values
 		// and loop over them as well
-		students.keySet();
-		students.values();
+		System.out.println(students.keySet());
+		System.out.println(students.values());
 
 		System.out.println("3.6.1. HashMap Methods");
 		Map<String, Integer> moons = new HashMap<>();
