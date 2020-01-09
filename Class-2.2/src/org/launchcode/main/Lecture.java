@@ -16,13 +16,13 @@ public class Lecture {
 	 */
 	public static void main(String[] args) {
 		// 3.1 - condititionals
-		//section31conditionals();
+		section31conditionals();
 
 		// 3.2 - loops
-		//section32loops();
+		section32loops();
 
 		// 3.4 - arraylist
-		//section34arrayList();
+		section34arrayList();
 
 		// 3.6 - hashmap
 		section36hashMap();
