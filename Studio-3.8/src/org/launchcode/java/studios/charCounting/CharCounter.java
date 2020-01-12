@@ -38,7 +38,7 @@ public class CharCounter {
 		Map<Character, Integer> countedChars = new HashMap<>();
 
 		for (char curChar : charactersInString) {
-			if(Character.isLetter(curChar)) {
+			if (Character.isLetter(curChar)) {
 				if (countedChars.containsKey(curChar)) {
 					int curVal = countedChars.get(curChar);
 					countedChars.put(curChar, curVal++);
