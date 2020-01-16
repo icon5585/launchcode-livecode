@@ -28,8 +28,15 @@ public class Lecture {
 		// 5.1.2. Static Fields
 		// See class Temperature
 
-		// Accesing from outside of class
+		// Accessing from outside of class
 		Temperature temp = new Temperature();
+		Temperature temp2 = new Temperature();
+		Temperature face = new Temperature();
+		
+		
+		System.out.println(temp.absoluteZeroFahrenheit);
+		System.out.println(Temperature.absoluteZeroFahrenheit);
+		
 		// If the static field is public, we can do this - This is the correct way,
 		// period.
 		System.out.println("Absolute zero in F is: " + Temperature.absoluteZeroFahrenheit);
@@ -49,6 +56,7 @@ public class Lecture {
 		// 5.2.2. Instance Methods
 		// Refer to Student class
 		Student billy = new Student("Billy", 7, 16, 3.6);
+		
 		// An example of an instance method (billy is an instance of class Student)
 		System.out.println(billy.getGradeLevel());
 
@@ -65,6 +73,7 @@ public class Lecture {
 	private static void section53SpecialMethods() {
 		// 5.3.1. ToString
 		Student person = new Student("Violet");
+		
 		// String representation of object
 		// Note: If toString is not overridden, will display fully-qualified class name
 		// @ memory address (not super helpful). You SHOULD always override your

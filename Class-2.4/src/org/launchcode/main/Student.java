@@ -37,11 +37,13 @@ public class Student {
 	}
 
 	// 5.3.1. toString
+	@Override
 	public String toString() {
 		return name + " (Credits: " + numberOfCredits + ", GPA: " + gpa + ")";
 	}
 
 	// 5.3.2. equals
+	@Override
 	public boolean equals(Object o) {
 		// Reference check
 		if (o == this) {
