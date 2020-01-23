@@ -11,11 +11,16 @@ public class BalancedBracketsTest {
 		assertEquals(true, true);
 	}
 
-	@Test
-	public void onlyBracketsReturnsTrue() {
-		assertTrue(BalancedBrackets.hasBalancedBrackets("[]"));
+	@Test(expected = NullPointerException.class)
+	public void testHasBalancedBracketsNull() {
+		BalancedBrackets.hasBalancedBrackets(null);
 	}
-
+	
+	@Test
+	public void testBad() {
+		assertFalse(BalancedBrackets.hasBalancedBrackets("]["));
+	}
+	
 	@Test
 	public void testHasBalancedBracketsTrueEmpty() {
 		assertTrue(BalancedBrackets.hasBalancedBrackets(""));
@@ -38,11 +43,6 @@ public class BalancedBracketsTest {
 
 	@Test
 	public void testHasBalancedBracketsTrue4() {
-		assertTrue(BalancedBrackets.hasBalancedBrackets("Launch[Code]"));
-	}
-
-	@Test
-	public void testHasBalancedBracketsTrue5() {
 		assertTrue(BalancedBrackets.hasBalancedBrackets("[]LaunchCode"));
 	}
 
