@@ -26,10 +26,12 @@ public class CarTest {
 	private static int numTestsRun = 0;
 
 	// Concepts...
-	// @BeforeClass, @Before, @After, @AfterClass, @Test @ asserts...
+	// @BeforeClass, @Before, @After, @AfterClass, @Test & asserts...
 
 	Car testCar;
 
+	// THESE ARE ALL OPTIONAL!
+	
 	// Only run once for the entire test at the beginning
 	@BeforeClass
 	public static void setup() {
