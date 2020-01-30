@@ -2,7 +2,7 @@ package org.launchcode.main.cat;
 
 
 // 7.4.1 - Uncomment abstract
-public /* abstract */ class Cat {
+public /*abstract*/ class Cat {
 
     private boolean tired = false;
     private boolean hungry = false;

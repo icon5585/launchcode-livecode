@@ -20,9 +20,11 @@ public class Lecture {
 
 		// 7.3.1 - Inheriting fields/properties/methods
 		HouseCat garfield = new HouseCat("Garfield", 12);
+		
 		// HouseCat class doesn't have an eat method, but Cat class does! (inheritance
 		// at work)
 		garfield.eat();
+		
 		// prints true
 		System.out.println(garfield.isTired());
 
@@ -62,9 +64,9 @@ public class Lecture {
 		// When one class extends another, as HouseCat extends Cat, a field or local variable of the type of 
 		// the base class may hold an object that is of the type of the child class.
 		Cat suki = new HouseCat("Suki", 8);
-		
-		suki.noise(); // Hello, my name is Suki!
-		
+		suki.eat();
+		System.out.println(suki.noise()); // Hello, my name is Suki!
+		 
 
 		// Remember, as far as it knows, it's declared as a Cat, instantiated as a HouseCat
 		// Side note: Most developers create interfaces that have all declared methods and have implementations
@@ -103,7 +105,7 @@ public class Lecture {
 			System.out.println("HouseCat is an instance of Cat");
 		}
 		
-		if(baseCat instanceof HouseCat) {
+		if(houseCat instanceof HouseCat) {
 			// True or false?
 			System.out.println("HouseCat is an instance of HouseCat");
 		}

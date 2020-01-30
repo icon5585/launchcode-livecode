@@ -21,11 +21,6 @@ public class HouseCat extends Cat {
         return !isHungry() && !isTired();
     }
 
-//    @Override
-//    public String noise() {
-//        return "Hello, my name is " + name + "!";
-//    }
-
     @Override
     public String noise() {
         if (isSatisfied()) {

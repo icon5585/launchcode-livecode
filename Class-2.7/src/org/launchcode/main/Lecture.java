@@ -16,7 +16,7 @@ public class Lecture {
 		
 		// The CatOwner constructor takes in a "Cat" as it's parameter...
 		// A HouseCat "is a" Cat so this works through Polymorphism
-		CatOwner Annie = new CatOwner (suki);
+		CatOwner Annie = new CatOwner(suki);
 
 		Annie.feedTheCat();
 		
