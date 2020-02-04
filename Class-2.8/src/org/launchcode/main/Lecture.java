@@ -30,7 +30,6 @@ public class Lecture {
 		
 		// 10.1 - Simple Controllers
 		// See class HelloController.java in hello-spring project
-		
 	}
 
 }
