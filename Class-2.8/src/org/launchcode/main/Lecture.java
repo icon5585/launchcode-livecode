@@ -3,7 +3,7 @@ package org.launchcode.main;
 public class Lecture {
 
 	/**
-	 * Class 2.6 - 2/3/2020 - Chapter 9/10 - Intro to Spring & Controllers - Hank DeDona
+	 * Class 2.8 - 2/3/2020 - Chapter 9/10 - Intro to Spring & Controllers - Hank DeDona
 	 * 
 	 * @param args arguments passed into app at runtime
 	 */
