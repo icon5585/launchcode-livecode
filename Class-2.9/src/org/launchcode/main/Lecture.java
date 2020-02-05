@@ -34,7 +34,9 @@ public class Lecture {
 		// The first part declares whether it's for the code (compile) or tests (testCompile)
 		// The second part declares the dependency that you need 
 		// compile "joda-time:joda-time:2.2"
+		// Note: This is also known as implementation in the latest version of gradle
 	    // testCompile "junit:junit:4.12"
+		// Note: This is also known as testImplementation in the latest version of gradle
 		
 		// --------------------------------------------------------------------------------------------------------
 		
@@ -81,8 +83,6 @@ public class Lecture {
 		// Debugging... 
 		// Very powerful, add breakpoints in your code and "step" through it. I've done it before in class and it 
 		// helps in finding bugs in your code :)
-		
-		
 		
 	}
 }
