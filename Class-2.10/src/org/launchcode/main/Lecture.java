@@ -17,7 +17,7 @@ public class Lecture {
 		// implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 		
 		// 11.2.3 - Intro to templates (static)
-		// All thymeleaf templates will reside in your src/main/resource/templates folder
+		// All thymeleaf templates will reside in your src/main/resources/templates folder
 		
 		// Adding thymeleaf to an HTML file via XML namespaces
 		// xmlns:th="http://www.thymeleaf.org/"
