@@ -22,7 +22,7 @@ public class Lecture {
 		
 		// 12.1.3 Model Vs. Controller
 		// What does a model do?
-		//Model code defines the logic for processes that the user never needs to see. These include:
+		// Model code defines the logic for processes that the user never needs to see. These include:
 
 		// 1) The mechanics for storing data.
 		// 2) The mechanics for retrieving data.
