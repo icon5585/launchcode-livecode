@@ -88,7 +88,7 @@ public class Lecture {
 		// Example: th:field="${event.description}" - This will map this form field to the Event classes description variable/field.
 		// Refer to the create.html template in the coding-events project
 		
-		// In order to use the th:field tag, your model class (Event in this example) must have a no-arg/empty/default constructor 
+		// In order to use the th:field tag, your model class (Event in this example) MUST have a no-arg/empty/default constructor 
 		
 		// 13.4.2.2 - Using th:errors
 		// When doing form validation "client-side" using thymeleaf form validation, we need a way to display any constraint errors that may occur (for each field)
