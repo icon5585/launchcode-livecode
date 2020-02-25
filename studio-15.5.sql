@@ -24,6 +24,7 @@ SELECT * FROM movies m INNER JOIN directors d ON m.director_id = d.director_id;
 SELECT * FROM movies m INNER JOIN directors d ON m.director_id = d.director_id ORDER BY d.last_name ASC;
 # 10
 SELECT d.first_name, d.last_name FROM directors d INNER JOIN movies m ON d.director_id = m.director_id WHERE m.title = 'The Incredibles';
+SELECT d.first_name, d.last_name FROM directors d, movies m WHERE d.director_id = m.director_id AND m.title = 'The Incredibles';
 # 11
 SELECT d.last_name, d.country FROM directors d INNER JOIN movies m ON d.director_id = m.director_id WHERE m.title = 'Roma';
 # 12
