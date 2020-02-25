@@ -22,7 +22,7 @@ public class Lecture {
 		// There are multiple number types in MySQL including INT, BIGINT, DOUBLE, etc.
 		
 		// 15.1.1.2. Strings
-		// Strings in MySQL are valled VARCHAR, you can also specify a max size via VARCHAR(250)
+		// Strings in MySQL are called VARCHAR, you can also specify a max size via VARCHAR(250)
 		
 		// 15.1.1.3. Boolean
 		// Boolean values in MySQL are called BOOL - they store true or false values
@@ -135,7 +135,7 @@ public class Lecture {
 		/*
 		 * SELECT column_name_1, column_name_2, ....
 			FROM table_a
-			TYPEOFJOIN JOIN table_b ON table_a.column_name_1 = table_b.column_name_1;
+			INNER JOIN table_b ON table_a.column_name_1 = table_b.column_name_1;
 		 */
 		
 		// Inner Join - Where values are on BOTH tables
