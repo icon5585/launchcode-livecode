@@ -16,11 +16,15 @@ public class Lecture {
 		// 16.1.3 - Table Keys
 		// Each and every table MUST have a primary key that is unique
 		
-		// In order to have a foreign key relationship, you must have a column that represents the primary key of another table. 
+		// In order to have a foreign key relationship, you must have a column that represents 
+		// the primary key of another table. 
 		
 		// 16.1.3.1 - Adding a primary key
 		// column_name INTEGER PRIMARY KEY AUTO_INCREMENT
 		// AUTO_INCREMENT - This allows MySQL to keep track of the primary key and assign the values for us.
+		
+		// Note: If you want the primary key start at a certain value, do this
+		// ALTER TABLE table AUTO_INCREMENT = 20000;
 		
 		// E.g. - A courses table
 		/*
@@ -59,7 +63,7 @@ public class Lecture {
 		
 		// Inner Join Refresher
 		// SELECT * FROM movies m INNER JOIN directors d ON m.director_id = d.director_id;
-		// This will get all data where it overlaps on BOTH tables (movies and diretors in this example)
+		// This will get all data where it overlaps on BOTH tables (movies and directors in this example)
 		
 		// Left/Right Outer Join Refresher
 		// This will get the data where it overlaps OR exists in the left or right table.
@@ -90,6 +94,5 @@ public class Lecture {
 		 * SELECT drawer_id, color FROM pen_drawer
 				WHERE supply_id IN (SELECT supply_id FROM writing_supply WHERE utensil_type = "Pen");
 		 */
-		
 	}
 }
