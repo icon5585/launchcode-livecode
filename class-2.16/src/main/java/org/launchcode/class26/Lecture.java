@@ -33,7 +33,7 @@ public class Lecture {
 		
 		// E.g. a ContactInfo object
 		// Java
-		ContactInfo frank = new ContactInfo("Frank","frank@email.com");
+		ContactInfo frank = new ContactInfo("Frank", "frank@email.com");
 		
 		// SQL
 		// INSERT INTO contactinfo (id,name,email) VALUES (3,"Frank","frank@email.com");
