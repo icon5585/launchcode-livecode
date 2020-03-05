@@ -35,6 +35,6 @@ public class Lecture {
 		// Refer to the EventCategory.java class in the coding-events project
 		
 		// What does this do for us? It creates foreign key relationships
-		// Refer to the event DB table, it's added a new field "event_category_id" which referenes the event_category ID field 
+		// Refer to the event DB table, it's added a new field "event_category_id" which references the event_category ID field 
 	}
 }
