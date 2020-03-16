@@ -109,5 +109,7 @@ public class Lecture {
 		// 19.5.3 - Registering your new filter!
 		// Spring needs to know about your filter in order to apply it to all in-bound web application requests
 		// Refer to WebApplicationConfig.java in the coding-events project
+		// @Configuration - Annotation to define spring configuration
+		// Override the  addInterceptors(InterceptorRegistry registry) method and add your filter! 
 	}
 }
