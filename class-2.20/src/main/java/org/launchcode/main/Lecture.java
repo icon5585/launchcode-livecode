@@ -83,8 +83,5 @@ public class Lecture {
 		
 		// Refer to CustomerController.java, Customer.java and Order.java
 		
-		
-		
-		
 	}
 }

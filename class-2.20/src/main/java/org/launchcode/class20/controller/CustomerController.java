@@ -10,13 +10,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * Rest controller for {@link Customer}s and their {@link Order}s
+ * 
+ * @author Hank DeDona
+ */
 @RestController
 public class CustomerController {
 
 	/**
 	 * Resource that produces an application/json representation of a customer
 	 * 
-	 * @return
+	 * @return a JSON {@link Customer} object
 	 */
 	@GetMapping(path = "customer/{customerId}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public Customer getCustomer(@PathVariable String customerId) {
@@ -48,7 +53,7 @@ public class CustomerController {
 	 * Resource that produces an application/json representation of a customers
 	 * order
 	 * 
-	 * @return
+	 * @return a JSON {@link Order} object
 	 */
 	@GetMapping(path = "customer/{customerId}/orders/{orderId}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public Order getCustomerOrder(@PathVariable String customerId, @PathVariable String orderId) {

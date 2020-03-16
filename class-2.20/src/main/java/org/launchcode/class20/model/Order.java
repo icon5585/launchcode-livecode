@@ -1,8 +1,12 @@
 package org.launchcode.class20.model;
 
+/**
+ * Class to represent a {@link Customer} order
+ * 
+ * @author Hank DeDona
+ */
 public class Order {
 
-	
 	private String orderId;
 	private String description;
 	

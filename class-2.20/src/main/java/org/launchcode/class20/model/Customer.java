@@ -2,7 +2,11 @@ package org.launchcode.class20.model;
 
 import java.util.List;
 
-
+/**
+ * A class to represent a customer
+ * 
+ * @author Hank DeDona
+ */
 public class Customer {
 
 	private String customerId;
@@ -13,6 +17,7 @@ public class Customer {
 	private String state;
 	private Integer zip;
 	private List<Order> orders;
+	
 	public String getFirstName() {
 		return firstName;
 	}
