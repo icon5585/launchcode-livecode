@@ -6,13 +6,11 @@ import java.util.List;
 import org.launchcode.class20.model.Customer;
 import org.launchcode.class20.model.Order;
 import org.springframework.http.MediaType;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
-@RequestMapping("customer")
+@RestController
 public class CustomerController {
 
 	/**
@@ -20,10 +18,11 @@ public class CustomerController {
 	 * 
 	 * @return
 	 */
-	@GetMapping(path = "{customer_id}", produces = MediaType.APPLICATION_JSON_VALUE)
-	public Customer getCustomer(@PathVariable("customer_id") String customerId) {
+	@GetMapping(path = "customer/{customerId}", produces = MediaType.APPLICATION_JSON_VALUE)
+	public Customer getCustomer(@PathVariable String customerId) {
 
 		Customer tempCust = new Customer();
+		tempCust.setCustomerId(customerId);
 		tempCust.setFirstName("Test");
 		tempCust.setLastName("LastName");
 		tempCust.setAddress("1 Test Ln");
@@ -51,9 +50,8 @@ public class CustomerController {
 	 * 
 	 * @return
 	 */
-	@GetMapping(path = "{customer_id}/orders/{order_id}", produces = MediaType.APPLICATION_JSON_VALUE)
-	public Order getCustomerOrder(@PathVariable("customer_id") String customerId,
-			@PathVariable("order_id") String orderId) {
+	@GetMapping(path = "customer/{customerId}/orders/{orderId}", produces = MediaType.APPLICATION_JSON_VALUE)
+	public Order getCustomerOrder(@PathVariable String customerId, @PathVariable String orderId) {
 
 		Order tempOrder = new Order();
 		tempOrder.setOrderId(orderId);

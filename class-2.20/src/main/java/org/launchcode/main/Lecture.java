@@ -76,6 +76,11 @@ public class Lecture {
 		// for a given customers specific order
 		
 		// So how do we do this in Spring? 
+		
+		// We can use the convenience annotation @RestController instead of @Controller
+		// This annotation combines the @Controller and @ResponseBody annotations into one!
+		// This allows us to return JSON objects!
+		
 		// Refer to CustomerController.java, Customer.java and Order.java
 		
 		

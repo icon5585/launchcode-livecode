@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Customer {
 
+	private String customerId;
 	private String firstName;
 	private String lastName;
 	private String address;
@@ -53,6 +54,12 @@ public class Customer {
 	}
 	public void setOrders(List<Order> orders) {
 		this.orders = orders;
+	}
+	public String getCustomerId() {
+		return customerId;
+	}
+	public void setCustomerId(String customerId) {
+		this.customerId = customerId;
 	}
 	
 	
