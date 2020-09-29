@@ -1,4 +1,5 @@
 ﻿using System;
+using HelloMethods;
 
 /**
  * LC 101 - Unit 2 
@@ -9,7 +10,7 @@
  */
 namespace Class_2._1
 {
-    class Program
+    class Lecture
     {
         static void Main(string[] args)
         {
@@ -128,7 +129,9 @@ namespace Class_2._1
 			Cat.makeNoise("purr");      // Outputs purr
 
 			// 2.4.3. HelloMethods
-			// Refer to HelloMethods
+			string message = Message.GetMessage("fr");  // Calling a static method using ClassName.MethodName(arguments)
+			Console.WriteLine(message);
+			Console.ReadLine();
 		}
 	}
 }
