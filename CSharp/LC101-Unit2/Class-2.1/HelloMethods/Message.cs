@@ -17,5 +17,11 @@
                 return "Hello World";
             }
         }
+
+
+        private static string GetPrivateMessage(string hi)
+        {
+            return "Secret message: " + hi;
+        }
     }
 }

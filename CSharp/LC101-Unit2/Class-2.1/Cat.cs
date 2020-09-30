@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace Class_2._1
 {
     public class Cat

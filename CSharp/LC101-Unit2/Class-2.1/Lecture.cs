@@ -131,7 +131,9 @@ namespace Class_2._1
 			// 2.4.3. HelloMethods
 			string message = Message.GetMessage("fr");  // Calling a static method using ClassName.MethodName(arguments)
 			Console.WriteLine(message);
-			Console.ReadLine();
+
+			// Won't work since the method is private!
+			//string secretMessage = Message.GetPrivateMessage("Hello?");
 		}
 	}
 }
