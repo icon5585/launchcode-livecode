@@ -68,20 +68,20 @@ namespace Class_2._2
             // 3.2 - Loops
             // 3.2.1 for loops
 
-            // What this is saying is loop, setting i to 0 until i is less than 10 and increment it by 1
-            // Note i++ is the same as i = i + 1
-            for (int i = 0; i < 10; i++)
+            // What this is saying is loop, setting j to 0 until j is less than 10 and increment it by 1
+            // Note j++ is the same as j = j + 1
+            for (int j = 0; j < 10; j++)
             {
-                Console.WriteLine(i);
+                Console.WriteLine(j);
             }
 
             // 3.2.2 foreach loops
             // foreach loops allow you to loop over collections (read like for each item in a collection, do something)
             int[] nums = { 1, 1, 2, 3, 5, 8, 13, 21 };
 
-            foreach (int i in nums)
+            foreach (int k in nums)
             {
-                Console.WriteLine(i);
+                Console.WriteLine(k);
             }
 
             // 3.2.3 while loops
