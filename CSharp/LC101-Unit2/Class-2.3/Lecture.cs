@@ -35,7 +35,9 @@ namespace Class_2._3
             // Refer to student class
             Student billy = new Student();
             billy.Name = "billy";
+            billy.Id = 4096;
             Console.WriteLine("Students name is: " + billy.Name);
+            Console.WriteLine("Students ID is: " + billy.Id);
 
             // 4.4 Constructors
             // We've already talked about constructors before, anytime we instantiate an object and use the
