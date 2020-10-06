@@ -40,7 +40,7 @@ namespace Class_2._3
         }
 
         // Shorthand for getter/setters
-        public int Id { get; set; }
+        public int StudentId { get; set; }
     }
 
 
