@@ -49,7 +49,7 @@ namespace Class_2._4
 
             // The Stack - LIFO (Last In - First Out)
             // Think of it as a stack of lunch trays, when you push one onto the stack it's the first removed from the top.
-            Stack<String> states = new Stack<string>();
+            Stack<string> states = new Stack<string>();
 
             // Add states to the stack by using Push()
             states.Push("Alabama");
