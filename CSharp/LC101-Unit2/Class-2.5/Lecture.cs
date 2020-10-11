@@ -13,6 +13,9 @@ namespace Class_2._5
     {
         static void Main(string[] args)
         {
+            // Pre-lecture
+            FieldsVsProperties();
+
             // 5.1 Customizing Fields
             Chapter51();
 
@@ -21,6 +24,26 @@ namespace Class_2._5
 
             // 5.3 Special Methods
             Chapter53();
+        }
+
+        public static void FieldsVsProperties()
+        {
+            // Fields store data
+            // Properties provide access to data (with underlying fields)
+            FieldsVsProperties fvp = new FieldsVsProperties();
+
+            fvp.SetField1("field 1 value setter");
+            Console.WriteLine("Field 1: " + fvp.GetField1());       // Note: Notice the parenthesis () - signifying a method call
+
+
+            fvp.Property1 = "property 1 value";
+            Console.WriteLine("Property 1: " + fvp.Property1);      // Note: Notice there aren't any parenthesis () - signifying a property
+
+            fvp.Property2 = "";     // Blank value, should not set it
+            Console.WriteLine("Property 2: " + fvp.Property2);
+
+            fvp.Property2 = "proerty 2 value";
+            Console.WriteLine("Property 2 again: " + fvp.Property2);
         }
 
         public static void Chapter51() {
@@ -66,7 +89,7 @@ namespace Class_2._5
         public static void Chapter52() {
             // 5.2.2 Instance Methods
             // Instance methods define the behaviors that are unique or specialized to each class. Every object created from a class will carry a copy of these methods.
-            // Note: These methods work on the properties of the instance of the object/class.
+            // Note: These methods work on the fields of the instance of the object/class.
             // i.e. Instance methods depend on the data stored in an INDIVIDUAL OBJECT. If two objects call the same method, the results will vary when the objects contain different data.
 
             // e.g. Lets look at this Hello class, there are 2 instances of the hello class calling the same method, but with different output based on its data.
@@ -87,7 +110,7 @@ namespace Class_2._5
             // hello1.HelloWorld();
 
             // One common error new C# coders encounter is when a static method tries to call an instance variable.
-            // This is not allowed, an static methods reference instance properties.
+            // Static methods reference instance properties is not allowed, 
         }
 
         public static void Chapter53() {
