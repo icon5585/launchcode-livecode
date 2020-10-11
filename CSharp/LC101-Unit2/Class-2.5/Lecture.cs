@@ -29,7 +29,7 @@ namespace Class_2._5
         public static void FieldsVsProperties()
         {
             // Fields store data
-            // Properties provide access to data (with underlying fields)
+            // Properties provide access to data (with underlying fields) - this is an example of abstraction
             FieldsVsProperties fvp = new FieldsVsProperties();
 
             fvp.SetField1("field 1 value setter");
