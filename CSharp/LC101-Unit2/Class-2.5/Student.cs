@@ -80,7 +80,7 @@ namespace Class_2._5
 
             // 3) Second thing to check is if the classes are the same, if not, they can't be equals
             // Class check: Compare the classes of the two objects to ensure a safe cast. Return false if the classes are different.
-            if (toBeCompared.GetType() != GetType())
+            if (toBeCompared.GetType() != this.GetType())
             {
                 return false;
             }
@@ -90,7 +90,7 @@ namespace Class_2._5
             // Custom comparison: Use custom logic to determine whether or not the two objects should be considered equal. This will usually be a comparison of class properties.
             if (toBeCompared is Student s)
             {
-                return s.studentId == studentId;
+                return s.studentId == studentId && s.Name == Name;
             }
 
             // Lastly, if they're not equal, return false

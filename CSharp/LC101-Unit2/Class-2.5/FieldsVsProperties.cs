@@ -31,8 +31,7 @@ namespace Class_2._5
             get {
                 return property2;
                 }
-            set
-            {
+            set {
                 // Note: value is the default for the setter, the "value" that's passed in
                 if(value != null && value != "")
                 {

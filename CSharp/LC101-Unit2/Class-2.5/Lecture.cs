@@ -73,7 +73,7 @@ namespace Class_2._5
             // If the static field is public, we can do this
             // Note: I didn't have to create a "new" Temperature object in order to access the AbsoluteZeroFahrenheit property
             Console.WriteLine("Absolute zero in F is: " + Temperature.AbsoluteZeroFahrenheit);
-
+             
             // If we have an object named "temp" of type Temperature, we cannot do this. Remember that static properties are part of the class, not the instance
             Temperature temp = new Temperature();
             // Console.WriteLine("Absolute zero in F is: " + temp.absoluteZeroFahrenheit);
