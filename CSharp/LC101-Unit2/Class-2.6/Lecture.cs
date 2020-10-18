@@ -34,7 +34,7 @@ namespace Class_2._6
             // 6.2 MSTest
             // Refer to the Project: Class-2.6-Tests
 
-            // 6.2.3. [TestClass] and [TestMethod]¶
+            // 6.2.3. [TestClass] and [TestMethod]
             // In order to specify a class as a test class, you need to use the [TestClass] attribute
             // Refer to CarTests in Class-2.6-Tests
 
@@ -48,7 +48,7 @@ namespace Class_2._6
             // Method called after EACH test run
 
             // 6.2.6 Common Assert Methods
-            // AreEqual(expected, actual, optional_delta) - Asser tthe expected and actual are equal (within the delta)
+            // AreEqual(expected, actual, optional_delta) - Assert the expected and actual are equal (within the delta)
             // IsFalse(condition) - Assert that a condition is false
             // IsTrue(condition) - Assert that a condition is true
             // IsNotNull(object) - Assert that an object isn't null
