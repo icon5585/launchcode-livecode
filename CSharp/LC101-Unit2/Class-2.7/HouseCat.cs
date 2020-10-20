@@ -20,6 +20,11 @@ namespace Class_2._7
             Name = name;
         }
 
+        public HouseCat(String name, double weight, bool tired) : base(weight, tired)
+        {
+            Name = name;
+        }
+
         // If we want a HouseCat constructor that takes in weight only, we have to define it
         // and call the base constructor like so, there is no constructor body
         // Note: We are not setting Name here, which is bad and only for teaching purposes

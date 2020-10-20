@@ -28,7 +28,7 @@ namespace Class_2._7
         private static void DictionariesExplained() {
             // Dictionaries are key value pairs
             // You typically use a dictionary by "getting" the value by the key
-            // The Dictionary is part of th3e SYstem.Collections.Generic package
+            // The Dictionary is part of the SYstem.Collections.Generic package
 
             // Declaring a new dictionary that has keys that are strings as well as values that are strings
             Dictionary<string, string> hankDictionary = new Dictionary<string, string>();
@@ -123,8 +123,6 @@ namespace Class_2._7
 
             // Note: Any base classes with abstract methods that are extended, the extended class MUST implement a method
             // with a method body that matches the method signature.
-
-
         }
 
         private static void Chapter75()
@@ -136,7 +134,7 @@ namespace Class_2._7
             // Note: We are declaring suki as a Cat and instantiating as a HouseCat
             Cat suki = new HouseCat("Suki", 8);
 
-            suki.Noise(); // Hello, my name is Suki!
+            suki.Noise(); // Meow!
 
             // Results in a compiler error, since Cat doesn't have such a method
             // suki.IsSatisfied();
@@ -153,9 +151,7 @@ namespace Class_2._7
                 (suki as HouseCat).IsSatisfied();
             }
 
-
         }
-
 
     }
 }

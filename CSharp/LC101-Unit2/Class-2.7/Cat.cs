@@ -14,6 +14,12 @@ namespace Class_2._7
             Weight = weight;
         }
 
+        public Cat(double weight, Boolean tired)
+        {
+            Weight = weight;
+            Tired = tired;
+        }
+
         public Cat() { }
 
         public void Sleep()
