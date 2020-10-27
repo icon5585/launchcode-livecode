@@ -27,12 +27,10 @@ namespace Class_2._8
         {
             // 8.1.1. Polymorphism
             // As we saw on Tuesday, Polymorphism also includes casting. 
-
             HouseCat suki = new HouseCat("Suki", 12);
 
             // Note: This takes in a CAT, it could be ANY class that extends cat (HouseCat, Tiger, etc)
-            CatSitter annie = new CatSitter(suki);  
-
+            CatSitter annie = new CatSitter(suki);
         }
 
         private static void Chapter82()
@@ -82,7 +80,7 @@ namespace Class_2._8
 
             // It is used by collections such as List to sort its contents with the Sort method.
 
-            // Refer to CatComparer
+            // Refer to HouseCatComparer
 
             // Compare(T, T) returns an integer which determines which of the two objects comes before (in other words, “is less than”) the other.
             // If the returned value is less than zero, then the first parameter comes before the second.
