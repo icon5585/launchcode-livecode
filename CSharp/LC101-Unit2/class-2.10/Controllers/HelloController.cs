@@ -40,7 +40,7 @@ namespace class_2._10.Controllers
 
         // 10.3.2 Sending form data
         [HttpGet]
-        [Route("/helloworldform")]
+        [Route("helloworldform")]
         public IActionResult GetHelloWorldForm()
         {
             // This will return a simple html form
