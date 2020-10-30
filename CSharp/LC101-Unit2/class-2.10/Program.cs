@@ -81,7 +81,7 @@ namespace class_2._10
 
             // 10.4.2.2. One Method, Two Request Types
             // You can specify one method to handle multiple HTTP methods (e.g. GET and POST)
-            // The HttpGet and other method attributes can also take in the path
+            // The HttpGet and other method attributes can also take in the path (route)
             // For example: 
             // [HttpGet("welcome/{name?}")]
             // [HttpPost("welcome")]
