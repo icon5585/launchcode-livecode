@@ -175,7 +175,7 @@ namespace class_2._11
 
                 midPoint = (lowerBound + upperBound) / 2;   // Get the midpoint of the list (0 + 7) / 2 (as a double: 3.5, as an integer: 3)
 
-                // If the midpoint is greater than the value I'm searching for, set the upperBound to the midpoint - 1 
+                // If the element at the midpoint is greater than the value I'm searching for, set the upperBound to the midpoint - 1 
                 if (sortedList[midPoint] > searchVal)
                 {
                     upperBound = midPoint - 1;
