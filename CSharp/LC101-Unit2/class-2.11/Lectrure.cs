@@ -20,7 +20,6 @@ namespace class_2._11
             // For these examples, we will start with a list (or array) of integers
             // as these are easier, concrete examples that don't involve complex
             // comparison logic necessary. i.e. 5 > 7, 3 < 9 and 4 = 4 always.
-
             BubbleSortExample();
 
             // Linear search for 48 example
@@ -43,14 +42,7 @@ namespace class_2._11
         private static List<int> BubbleSortExample()
         {
             // Create an unsorted list of integers
-            List<int> unsortedList = new List<int>();
-            unsortedList.Add(5);
-            unsortedList.Add(21);
-            unsortedList.Add(99);
-            unsortedList.Add(22);
-            unsortedList.Add(1);
-            unsortedList.Add(33);
-            unsortedList.Add(48);
+            List<int> unsortedList = GetUnsortedList();
 
             // Output unsorted list
             Console.WriteLine("Unsorted list: ");
@@ -61,36 +53,22 @@ namespace class_2._11
 
             // Bubble sort
             // A bubble sort allows the larger values to "bubble up" to the end of the list
-            // It has a BigO(n) where n is the number of elements in the collection (or list in this case)
+            // It has a BigO(n^2) where n is the number of elements in the collection (or list in this case)
             // After the first loop, the biggest number should be at the end of the list
             // After the 2nd loop, the 2nd biggest number should be at the end of the list - 1
-            // etc. etc. hence we have to loop n times in order to sort a list in a WORST CASE SCENARIO
-            bool itemMoved = false;
-            do
+            // etc. etc. hence we have to loop n^2 (n squared) times in order to sort a list in a WORST CASE SCENARIO
+            for (int i = 0; i <= unsortedList.Count - 2; i++)
             {
-                itemMoved = false;
-
-                // We have to loop through the unsorted list from 0 -> count - 1
-                // in this case it's from 0 -> 5
-
-                // Why 5 instead of 6? Because we would get an array out of bounds
-                // exception when we compare i to i+1
-                for (int i = 0; i < unsortedList.Count - 1; i++)
+                for (int j = 0; j <= unsortedList.Count - 2; j++)
                 {
-                    // If list[i] > list[i+1]
-                    if (unsortedList[i] > unsortedList[i + 1])
+                    if (unsortedList[j] > unsortedList[j + 1])
                     {
-                        // Set the lower value to a temp variable, in this case lowerVal
-                        int lowerVal = unsortedList[i + 1];
-                        // Set list[i+1] to the value in list[i]
-                        unsortedList[i + 1] = unsortedList[i];
-                        // Set list[i] to the lower value in the temp variable
-                        unsortedList[i] = lowerVal;
-                        // Set the bool whether an item was moved to true
-                        itemMoved = true;
+                        int tempVal = unsortedList[j + 1];
+                        unsortedList[j + 1] = unsortedList[j];
+                        unsortedList[j] = tempVal;
                     }
                 }
-            } while (itemMoved);
+            }
 
             Console.WriteLine();
             // Output sorted list
@@ -108,14 +86,7 @@ namespace class_2._11
         private static void LinearSearchExample(int searchVal)
         {
             // Create an unsorted list of integers
-            List<int> unsortedList = new List<int>();
-            unsortedList.Add(5);
-            unsortedList.Add(21);
-            unsortedList.Add(99);
-            unsortedList.Add(22);
-            unsortedList.Add(1);
-            unsortedList.Add(33);
-            unsortedList.Add(48);
+            List<int> unsortedList = GetUnsortedList();
 
             // Linear search is exactly what it says, it searches through a linear data
             // structure (such as a list), until it finds what it needs (or doesn't)
@@ -203,6 +174,16 @@ namespace class_2._11
                 Console.WriteLine("Did not find the search value [" + searchVal + "] in the list");
             }
         }
-    }
 
+        private static List<int> GetUnsortedList()
+        {
+            // Create an unsorted list of integers
+            List<int> unsortedList = new List<int>
+            {
+                5,21,99,22,1,33,48
+            };
+
+            return unsortedList;
+        }
+    }
 }
