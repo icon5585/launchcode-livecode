@@ -19,7 +19,7 @@ namespace class_2._11
 
             // For these examples, we will start with a list (or array) of integers
             // as these are easier, concrete examples that don't involve complex
-            // comparison logic necessary. i.e. 5 > 7, 3 < 9 and 4 = 4 always.
+            // comparison logic necessary. i.e. 5 < 7, 3 < 9 and 4 = 4 always.
             BubbleSortExample();
 
             // Linear search for 48 example
@@ -115,7 +115,7 @@ namespace class_2._11
             if (found)
             {
                 Console.WriteLine("Found the search value [" + searchVal + "] in the list at location [" + loc + "]");
-                Console.WriteLine("Number of loops needed: " + loc);
+                Console.WriteLine("Number of loops needed: " + (loc + 1));
             }
             else
             {
