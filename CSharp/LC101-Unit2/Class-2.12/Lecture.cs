@@ -109,6 +109,9 @@ namespace Class_2._12
             // Right clicking on the Dependencies and click "Manage NuGet Packages..."
             // This will allow us to pull in 3rd party dependencies for our projects :)
 
+            // https://www.nuget.org/packages
+            // Popular JSON Library - https://www.nuget.org/packages/Newtonsoft.Json/
+
             // 12.3 Debugger
             // I've been using the debugger for our lectures, this allows you to "step through" your program
             // In the top left corner of Visual Studio you can see a drop down for release/debug, choose debug to
