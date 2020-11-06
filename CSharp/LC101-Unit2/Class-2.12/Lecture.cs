@@ -24,7 +24,7 @@ namespace Class_2._12
             // Exceptions in C# are objects derived from the System.Exception class
 
             // If you want to have an exceptional case in your code, we THROW them
-            // throw new Exception("Oh noes!");
+            //throw new Exception("Oh noes!");
 
             // 11.1.1 When Exceptions Arise
             // Refer to Temperature.Fahrenheit (setter)
@@ -56,7 +56,7 @@ namespace Class_2._12
 
             // Now sets it to absolute zero (-459.67)
             Temperature outsideTemp2 = new Temperature(-8200);
-            Console.WriteLine(outsideTemp.Fahrenheit);
+            Console.WriteLine(outsideTemp2.Fahrenheit);
 
             // 11.2.1.1 What to Catch
             // Since all exceptions extend System.Exception you can have try/catch blocks that
@@ -71,6 +71,16 @@ namespace Class_2._12
             // will be provided. Proactively validate user input for null/blank/out of bounds data to prevent this.
             // 2) Check for null references - this will prevent ArgumentNullExceptions, anytime you try to call a
             // function on a null reference, a ArgumentNullException will occur
+
+            // e.g.
+            Temperature nullTemp = null;
+            //nullTemp.ToString();    // This will throw an ArgumentNullException
+
+            // Check if null before calling methods on it
+            if(nullTemp != null)
+            {
+                nullTemp.ToString();
+            }
 
             // 11.3 Common Exception Objects
             // There are a few, commonly used exception objects you should familiarize yourself with as they are prevalent in C#
