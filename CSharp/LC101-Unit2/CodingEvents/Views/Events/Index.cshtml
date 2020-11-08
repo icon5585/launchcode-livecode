@@ -1,0 +1,24 @@
+﻿<h1>Coding Events</h1>
+
+<p>
+    <a asp-controller="Events" asp-action="Add">Add Event</a>
+</p>
+
+
+@if (ViewBag.events.Count == 0)
+{
+    <p>No events yet</p>
+}
+else
+{
+    <ul>
+        @foreach (String curEvent in ViewBag.events)
+        {
+            <li>@curEvent</li>
+        }
+    </ul>
+}
+
+<!--13.7.2.2 Partial view insertion-->
+<h5>Partial template values below...</h5>
+<partial name="/Views/Shared/_LinkListPartial.cshtml" />

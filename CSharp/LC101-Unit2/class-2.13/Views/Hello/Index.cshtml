@@ -1,0 +1,45 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;        // This will disable the default layout in Shared/_Layout.cshtml
+}
+
+<!-- 13.3.1.1 Access data in the template for the property "testProperty" -->
+<p>Our viewbag property value is: @ViewBag.testProperty</p>
+
+<!-- 13.4 Iterating in a template -->
+<p>My list of fruits :)</p>
+<ul>
+    @foreach (String fruit in ViewBag.fruits)
+    {
+        <li>@fruit</li>
+    }
+</ul>
+
+<!-- 13.4.1 Nested Loops -->
+<p>My coffee joints :)</p>
+@foreach (var coffeeShop in ViewBag.coffeeShops)
+{
+    <p>@coffeeShop.Name</p>
+    <ul>
+        @foreach (string coffeeType in coffeeShop.CoffeeOptions)
+        {
+            <li>@coffeeType</li>
+        }
+    </ul>
+}
+
+<!-- 13.5.1 Display content if/else-->
+@if(ViewBag.awesome)
+{
+    <p>We're awesome!</p>
+}
+else {
+    <p>We're still ok ;)</p>
+}
+
+<form method='post' action='/hello'>
+    <input type='text' name='name' />
+    <input type='submit' value='Greet Me!' />
+</form>
