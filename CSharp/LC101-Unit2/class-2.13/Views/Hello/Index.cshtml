@@ -12,6 +12,7 @@
 
 <!-- 13.4 Iterating in a template -->
 <p>My list of fruits :)</p>
+
 <ul>
     @foreach (String fruit in ViewBag.fruits)
     {
@@ -21,11 +22,11 @@
 
 <!-- 13.4.1 Nested Loops -->
 <p>My coffee joints :)</p>
-@foreach (var coffeeShop in ViewBag.coffeeShops)
+@foreach (CoffeeShop coffeeShop in ViewBag.coffeeShops)
 {
     <p>@coffeeShop.Name</p>
     <ul>
-        @foreach (string coffeeType in coffeeShop.CoffeeOptions)
+        @foreach (String coffeeType in coffeeShop.CoffeeOptions)
         {
             <li>@coffeeType</li>
         }
