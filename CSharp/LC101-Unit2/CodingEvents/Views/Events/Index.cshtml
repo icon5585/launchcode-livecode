@@ -23,6 +23,7 @@ else
         @foreach (Event curEvent in ViewBag.events)
         {
             <tr>
+                <td>@curEvent.Id</td>
                 <td>@curEvent.Name</td>
                 <td>@curEvent.Description</td>
             </tr>
