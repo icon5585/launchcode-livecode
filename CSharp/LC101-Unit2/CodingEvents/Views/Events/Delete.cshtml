@@ -1,0 +1,17 @@
+﻿<h1>Delete Event</h1>
+
+<form method="post">
+    @foreach (var evt in ViewBag.events)
+    {
+        <div class="form-group">
+            <label>
+                <span>@evt.Name</span>
+                <!-- Note: That we have to use the event ID in order to delete an event -->
+                <input type="checkbox" name="eventIds" value="@evt.Id" class="form-control">
+            </label>
+        </div>
+    }
+
+    <input type="submit" value="Delete Selected Events" class="btn btn-danger">
+
+</form>

@@ -6,5 +6,6 @@
 
   <ItemGroup>
     <Folder Include="Views\Events\" />
+    <Folder Include="Data\" />
   </ItemGroup>
 </Project>

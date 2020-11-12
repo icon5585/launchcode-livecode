@@ -2,6 +2,13 @@
 
 <!-- Since we don't provide a location in our method, it will POST to itself -->
 <form method="post">
-    <input name="name" type="text" />
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input name="name" type="text" />   <!-- Note that this matches the property in the Event model -->
+    </div>
+    <div class="form-group">
+        <label for="desc">Description</label>
+        <input name="description" />    <!-- Note that this matches the property in the Event model -->
+    </div>
     <input type="submit" value="Add Event" />
 </form>

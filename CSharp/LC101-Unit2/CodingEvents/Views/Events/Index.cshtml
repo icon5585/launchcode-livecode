@@ -11,13 +11,21 @@
 }
 else
 {
-    <ul>
-        @foreach (String curEvent in ViewBag.events)
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+        <!-- Note: You can also use a generic var instead of the specific class type -->
+        @foreach (Event curEvent in ViewBag.events)
         {
-            <li>@curEvent</li>
+            <tr>
+                <td>@curEvent.Name</td>
+                <td>@curEvent.Description</td>
+            </tr>
         }
-    </ul>
-}
+    </table>
+    }
 
 <!--13.7.2.2 Partial view insertion-->
 <h5>Partial template values below...</h5>
