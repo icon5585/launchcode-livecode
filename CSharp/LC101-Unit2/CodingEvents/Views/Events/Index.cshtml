@@ -16,8 +16,10 @@ else
 {
     <table class="table">
         <tr>
+            <th>ID</th>
             <th>Name</th>
             <th>Description</th>
+            <th>Delete?</th>
         </tr>
         <!-- Note: You can also use a generic var instead of the specific class type -->
         @foreach (Event curEvent in ViewBag.events)
@@ -26,11 +28,19 @@ else
                 <td>@curEvent.Id</td>
                 <td>@curEvent.Name</td>
                 <td>@curEvent.Description</td>
+                <td>
+                    <form method="post" action="/Events/Delete">
+                        <input type="hidden" name="eventIds" value="@curEvent.Id" />
+                        <input type="submit" value="Delete" class="btn btn-danger">
+                    </form>
+                </td>
             </tr>
         }
     </table>
-    }
+}
 
 <!--13.7.2.2 Partial view insertion-->
+<!--
 <h5>Partial template values below...</h5>
 <partial name="/Views/Shared/_LinkListPartial.cshtml" />
+-->
