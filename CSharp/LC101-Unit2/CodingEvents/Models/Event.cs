@@ -6,10 +6,9 @@ namespace CodingEvents.Models
     // This is a simple POCO with an event name
     public class Event
     {
-        [FromForm(Name = "name")]
         public string Name { get; set; }
-        [FromForm(Name = "description")]
         public string Description { get; set; }
+        public string ContactEmail { get; set; }
 
         public int Id { get; }
         private static int nextId = 1;
@@ -20,10 +19,11 @@ namespace CodingEvents.Models
             nextId++;
         }
 
-        public Event(String name, String description) : this()
+        public Event(string name, string description, string contactEmail) : this()
         {
             Name = name;
             Description = description;
+            ContactEmail = contactEmail;
         }
 
         public override string ToString()

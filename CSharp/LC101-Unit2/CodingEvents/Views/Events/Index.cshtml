@@ -1,4 +1,6 @@
-﻿<h1>Coding Events</h1>
+﻿@model List<CodingEvents.Models.Event>
+
+<h1>Coding Events</h1>
 
 <p>
     <a asp-controller="Events" asp-action="Add">Add Event</a>
@@ -8,7 +10,7 @@
 </p>
 
 
-@if (ViewBag.events.Count == 0)
+@if (Model.Count == 0)
 {
     <p>No events yet</p>
 }
@@ -19,15 +21,17 @@ else
             <th>ID</th>
             <th>Name</th>
             <th>Description</th>
+            <th>Contact Email</th>
             <th>Delete?</th>
         </tr>
         <!-- Note: You can also use a generic var instead of the specific class type -->
-        @foreach (Event curEvent in ViewBag.events)
+        @foreach (Event curEvent in Model)
         {
             <tr>
                 <td>@curEvent.Id</td>
                 <td>@curEvent.Name</td>
                 <td>@curEvent.Description</td>
+                <td>@curEvent.ContactEmail</td>
                 <td>
                     <form method="post" action="/Events/Delete">
                         <input type="hidden" name="eventIds" value="@curEvent.Id" />

@@ -1,14 +1,27 @@
-﻿<h1>Add Event</h1>
+﻿@model CodingEvents.ViewModels.AddEventViewModel
+
+<h1>Add Event</h1>
 
 <!-- Since we don't provide a location in our method, it will POST to itself -->
+<!-- Adding the asp-controller and asp-action to the form allows us -->
 <form method="post">
-    <div class="form-group">
-        <label for="name">Name</label>
-        <input name="name" type="text" />   <!-- Note that this matches the property in the Event model -->
+    <div asp-controller="Events" asp-action="NewEvent" class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" />
+        <!-- This element will only be created if there's a validation error with the ErrorMessage -->
+        <span asp-validation-for="Name"></span>
     </div>
     <div class="form-group">
-        <label for="description">Description</label>
-        <input name="description" />    <!-- Note that this matches the property in the Event model -->
+        <label asp-for="Description"></label>
+        <input asp-for="Description" />
+        <!-- This element will only be created if there's a validation error with the ErrorMessage -->
+        <span asp-validation-for="Description"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ContactEmail"></label>
+        <input asp-for="ContactEmail" />
+        <!-- This element will only be created if there's a validation error with the ErrorMessage -->
+        <span asp-validation-for="ContactEmail"></span>
     </div>
     <input type="submit" value="Add Event" />
 </form>
