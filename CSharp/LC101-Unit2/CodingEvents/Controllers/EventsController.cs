@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Linq;
 using System.Collections.Generic;
 using CodingEvents.Data;
 using CodingEvents.Models;
@@ -9,10 +9,19 @@ namespace CodingEvents.Controllers
 {
     public class EventsController : Controller
     {
+        private EventDbContext dbContext;
+
+        // Dependency injection in C# - This is an example of IOC
+        public EventsController(EventDbContext dbContext)
+        {
+            this.dbContext = dbContext;
+        }
+
         [HttpGet]
         public IActionResult Index()
         {
-            List<Event> events = new List<Event> (EventData.GetAll());
+            // 19.3.2.2 Get the list of events from the dbcontext
+            List<Event> events = dbContext.Events.ToList();
 
             // Passing in the events object to the view!
             return View(events);
@@ -41,7 +50,9 @@ namespace CodingEvents.Controllers
                     ContactEmail = addEventViewModel.ContactEmail
                 };
 
-                EventData.Add(newEvent);
+                // 19.3.2.2 Store (add) a new event to the DB
+                dbContext.Events.Add(newEvent);
+                dbContext.SaveChanges();
 
                 // Redirects back to the "events" index method above
                 return Redirect("/events");
@@ -54,7 +65,7 @@ namespace CodingEvents.Controllers
         [HttpGet]
         public IActionResult Delete()
         {
-            ViewBag.events = EventData.GetAll();
+            ViewBag.events = dbContext.Events.ToList();
 
             return View();
         }
@@ -63,10 +74,19 @@ namespace CodingEvents.Controllers
         [HttpPost]
         public IActionResult Delete(int[] eventIds)
         {
+            // 19.3.2.2 Query (find) the event in the DB
             foreach (int eventId in eventIds)
             {
-                EventData.Remove(eventId);
+                Event theEventToDelete = dbContext.Events.Find(eventId);
+                // 19.3.2.2 Delete the event from the DB
+                // If it doesn't find it, it will return NULL
+                if(theEventToDelete != null)
+                {
+                    dbContext.Events.Remove(theEventToDelete);
+                }
             }
+
+            dbContext.SaveChanges();
 
             return Redirect("/Events");
         }

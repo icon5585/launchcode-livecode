@@ -81,7 +81,7 @@ namespace Class_2._17
 				LEFT JOIN pencil_drawer ON writing_supply.supply_id = pencil_drawer.supply_id
 				WHERE refill = true
 
-				UNION
+				UNION  
 
 				SELECT writing_supply.supply_id, utensil_type, drawer_id, quantity FROM writing_supply
 				RIGHT JOIN pen_drawer ON writing_supply.supply_id = pen_drawer.supply_id
