@@ -22,6 +22,7 @@ else
             <th>Name</th>
             <th>Description</th>
             <th>Contact Email</th>
+            <th>Event Category</th>
             <th>Delete?</th>
         </tr>
         <!-- Note: You can also use a generic var instead of the specific class type -->
@@ -32,6 +33,7 @@ else
                 <td>@curEvent.Name</td>
                 <td>@curEvent.Description</td>
                 <td>@curEvent.ContactEmail</td>
+                <td>@curEvent.Category.Name</td>
                 <td>
                     <form method="post" action="/Events/Delete">
                         <input type="hidden" name="eventIds" value="@curEvent.Id" />

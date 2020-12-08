@@ -23,5 +23,10 @@
         <!-- This element will only be created if there's a validation error with the ErrorMessage -->
         <span asp-validation-for="ContactEmail"></span>
     </div>
+    <div class="form-group">
+        <!-- Our categories -->
+        <label asp-for="CategoryId">Event Category</label>
+        <select asp-for="CategoryId" asp-items="Model.Categories"></select>
+    </div>
     <input type="submit" value="Add Event" />
 </form>

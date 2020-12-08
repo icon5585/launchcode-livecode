@@ -1,0 +1,24 @@
+﻿@model List<CodingEvents.Models.EventCategory>
+
+<h1>All Event Categories</h1>
+
+@if (Model.Count == 0)
+{
+    <p>No Event Categories yet!</p>
+}
+else
+{
+    <table class="table">
+        <tr>
+            <th>Id
+            <th>Category Name</th>
+        </tr>
+        @foreach (EventCategory category in Model)
+        {
+            <tr>
+                <td>@category.Id</td>
+                <td>@category.Name</td>
+            </tr>
+        }
+    </table>
+}

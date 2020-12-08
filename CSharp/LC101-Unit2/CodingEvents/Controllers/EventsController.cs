@@ -4,6 +4,7 @@ using CodingEvents.Data;
 using CodingEvents.Models;
 using CodingEvents.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace CodingEvents.Controllers
 {
@@ -21,7 +22,9 @@ namespace CodingEvents.Controllers
         public IActionResult Index()
         {
             // 19.3.2.2 Get the list of events from the dbcontext
-            List<Event> events = dbContext.Events.ToList();
+            // We need to use a Lambda to force the EntityFramework to fetch the category
+            // relationship from the database
+            List<Event> events = dbContext.Events.Include(e => e.Category).ToList();
 
             // Passing in the events object to the view!
             return View(events);
@@ -30,7 +33,8 @@ namespace CodingEvents.Controllers
         [HttpGet]
         public IActionResult Add()
         {
-            AddEventViewModel addEventViewModel = new AddEventViewModel();
+            // Add the categories from the database context to the view model
+            AddEventViewModel addEventViewModel = new AddEventViewModel(dbContext.Categories.ToList());
 
             // 15.1.4 Passing in the new view model to the View method returned to the user
             // this will then be mapped to the form in the view
@@ -43,12 +47,14 @@ namespace CodingEvents.Controllers
             // If all of the validation attributes are valid, create the event and store it
             if (ModelState.IsValid)
             {
-                    // This is basically a line to convert an EventViewModel to an Event model object
-                    Event newEvent = new Event {
+                // This is basically a line to convert an EventViewModel to an Event model object
+                Event newEvent = new Event {
                     Name = addEventViewModel.Name,
                     Description = addEventViewModel.Description,
-                    ContactEmail = addEventViewModel.ContactEmail
-                };
+                    ContactEmail = addEventViewModel.ContactEmail,
+                    // Use the category ID selected in the view model to query the DB
+                    Category = dbContext.Categories.Find(addEventViewModel.CategoryId)
+            };
 
                 // 19.3.2.2 Store (add) a new event to the DB
                 dbContext.Events.Add(newEvent);

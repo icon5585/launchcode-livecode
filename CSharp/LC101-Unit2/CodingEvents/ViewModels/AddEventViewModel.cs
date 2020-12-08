@@ -1,4 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using CodingEvents.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace CodingEvents.ViewModels
 {
@@ -18,6 +21,28 @@ namespace CodingEvents.ViewModels
         [EmailAddress]
         public string ContactEmail { get; set; }
 
-        public AddEventViewModel() {}
+        // Primary key of event categories
+        [Required(ErrorMessage = "Category is required")]
+        public int CategoryId { get; set; }
+
+        // List of all available event categories (as select list items)
+        public List<SelectListItem> Categories { get; set; }
+
+        public AddEventViewModel() { }
+
+        public AddEventViewModel(List<EventCategory> categories)
+        {
+            Categories = new List<SelectListItem>();
+
+            // Generate the list of Select List Items based on the event categories from the DB
+            foreach(EventCategory curCategory in categories)
+            {
+                Categories.Add(new SelectListItem
+                {
+                    Value = curCategory.Id.ToString(),
+                    Text = curCategory.Name
+                });
+            }
+        }
     }
 }
