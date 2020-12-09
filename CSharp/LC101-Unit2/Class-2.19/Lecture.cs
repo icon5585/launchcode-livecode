@@ -123,7 +123,45 @@ namespace Class_2._19
             // The rest of the reading refactors the views, viewmodels, and controllers
             // to use the new event categories, which you should all be experts in now ;)
 
-            // 20.4 & 20.5 - To be continued
+            // ----- PART 2 -----
+
+            // 20.4 - Some setup
+
+            // The reading goes into little detail about setting up the code events project for
+            // event tags (which we'll use for many-to-many relationships), regardless, there
+            // is a bite of wisdom.
+
+            // We we want to use the .Include (for eagerly loading data with relationships) and
+            // then filter, we can use the .Single(lambda goes here to filter to a single entry)
+
+            // e.g. dbContext.Events.Include(e => e.Category).Single(e => e.Id == id);
+
+            // 20.5 Creating many-to-many relationships
+
+            // In order to relate two classes in a many-to-many fashion, we need something called a join table.
+            // This allows us to use two one-to-many relationships to create a many-to-many relationship.
+
+            // A join table has two columns that represent the primary key for each of the tables the relationship forms.
+
+            // e.g. a EventTag table with EventId and TagId from the Event and Tag tables respectively.
+
+            // The C# counterpart to the join table also needs to be created, refer to the EventTag class.
+            // In order for entityframeworkcore to work, we need to have two values for each side of the
+            // relationship (event and tag)
+
+            // EventId (primary key) and the Event object
+            // TagId (primary key) and the Tag object
+
+            // Composite keys... remember them?
+            // A composite key is a primary key that is made up of two columns whose concatenated value is unique,
+            // we do this in our DbContext OnModelCreating() method
+
+            // modelBuilder.Entity<EventTag>().HasKey(e => new { e.EventId, e.TagId });
+
+            // A lot of the reading has us going through setting up the views, view models, controllers, etc.
+            // which I will not be going through in this lecture becuase we've done it a few times now ;)
+
+            // Note: They did not mention running the dotnet ef commands... see above :)
         }
     }
 }

@@ -96,5 +96,22 @@ namespace CodingEvents.Controllers
 
             return Redirect("/Events");
         }
+
+        public IActionResult Detail(int id)
+        {
+            // Find the events that match the ID
+            Event theEvent = dbContext.Events
+                .Include(e => e.Category)
+                .Single(e => e.Id == id);
+
+            // Find all of the tags mapped to that event on the EventTags table
+            List<EventTag> eventTags = dbContext.EventTags
+                .Where(et => et.EventId == id)
+                .Include(et => et.Tag)
+                .ToList();
+
+            EventDetailViewModel viewModel = new EventDetailViewModel(theEvent, eventTags);
+            return View(viewModel);
+        }
     }
 }

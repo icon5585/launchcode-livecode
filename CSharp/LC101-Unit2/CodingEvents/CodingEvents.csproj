@@ -10,6 +10,7 @@
     <Folder Include="Data\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Views\EventCategory\" />
+    <Folder Include="Views\Tag\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.10">
