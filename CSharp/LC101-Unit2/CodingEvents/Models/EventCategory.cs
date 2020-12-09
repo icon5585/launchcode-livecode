@@ -7,6 +7,7 @@ namespace CodingEvents.Models
     {
         public string Name { get; set; }
 
+        // This will be the primary key
         public int Id { get; set; }
 
         // Other 1/2 of one-to-many relationship

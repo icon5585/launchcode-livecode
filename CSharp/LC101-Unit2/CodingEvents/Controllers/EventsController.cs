@@ -24,7 +24,7 @@ namespace CodingEvents.Controllers
             // 19.3.2.2 Get the list of events from the dbcontext
             // We need to use a Lambda to force the EntityFramework to fetch the category
             // relationship from the database
-            List<Event> events = dbContext.Events.Include(e => e.Category).ToList();
+            List<Event> events = dbContext.Events.Include(eventData => eventData.Category).ToList();
 
             // Passing in the events object to the view!
             return View(events);

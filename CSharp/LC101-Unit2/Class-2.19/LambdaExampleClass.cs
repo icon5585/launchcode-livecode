@@ -27,7 +27,7 @@ namespace Class_2._19
             }
 
             Console.WriteLine(string.Join(" ", doubledNums));
-            }
+        }
 
         public static void WhereExample()
         {
