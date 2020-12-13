@@ -5,9 +5,12 @@ using CodingEvents.Models;
 using CodingEvents.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CodingEvents.Controllers
 {
+    // 21.6 Add Authorize requirement to entire events controller
+    [Authorize]
     public class EventsController : Controller
     {
         private EventDbContext dbContext;
@@ -18,6 +21,8 @@ namespace CodingEvents.Controllers
             this.dbContext = dbContext;
         }
 
+        // 21.6 Allow anyone to get the index page (with all of the events)
+        [AllowAnonymous]
         [HttpGet]
         public IActionResult Index()
         {

@@ -1,10 +1,12 @@
 ﻿using CodingEvents.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace CodingEvents.Data
 {
     // 19.2.2.1 Your db context class must extend the entity framework core DbContext class
-    public class EventDbContext : DbContext
+    public class EventDbContext : IdentityDbContext<IdentityUser>
     {
         public DbSet<Event> Events { get; set; }
         public DbSet<EventCategory> Categories { get; set; }
@@ -23,6 +25,8 @@ namespace CodingEvents.Data
         {
             modelBuilder.Entity<EventTag>()
                 .HasKey(e => new { e.EventId, e.TagId });
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
