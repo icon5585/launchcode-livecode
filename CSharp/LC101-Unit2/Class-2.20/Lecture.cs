@@ -178,7 +178,7 @@ namespace Class_2._20
             // Authorization allows us to restrict access to pages to only logged in users. 
 
             // ASP.NET has two simple attributes that will allow us to restrict access to pages to only logged in users.
-            // [Authorize] - Limits access to content to onlyh logged in users, can be used on method or whole controller
+            // [Authorize] - Limits access to content to only logged in users, can be used on method or whole controller
             // [AllowAnonymous] - Allows any viewer to access content, note that this is the default.
 
             // For our coding events project, we will add the [Authorize] attribute to the whole controller, but allow
