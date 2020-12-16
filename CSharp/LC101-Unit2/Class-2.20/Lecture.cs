@@ -39,8 +39,8 @@ namespace Class_2._20
             // like this: session_id: 81LfWG9.
             // 3) For each subsequent request to the server, the browser passes the session cookie along with the request.
             // 4) When the server receives a request for a restricted resource, it checks for a session cookie.It then looks for a
-            // session with the given session ID.If such a session exists, then the server knows who the user is since their user ID
-            // is stored in the session.If the session does NOT exist, then the server does not know the user and they must authenticate themselves.
+            // session with the given session ID. If such a session exists, then the server knows who the user is since their user ID
+            // is stored in the session. If the session does NOT exist, then the server does not know the user and they must authenticate themselves.
 
             // Cookies (and therefore sessions) are used to determine if a user has access to restricted information.
 
@@ -51,7 +51,7 @@ namespace Class_2._20
             // Some things to note when using this library:
             // 1) Identity handles many aspects of the authentication process for you. This may hide steps that are important to
             // understand as you learn about authentication.
-            // 2) Some of the inner workings of Identity are beyond the scope of this course.Do not fear when troubleshooting!
+            // 2) Some of the inner workings of Identity are beyond the scope of this course. Do not fear when troubleshooting!
             // 3) Identity has lots of different configuration options and can handle complex authentication setups.
 
             // 21.2 Hashing Passwords
@@ -157,7 +157,7 @@ namespace Class_2._20
             // UserManager allows us to register the user in the database
 
             // Areas/Identity/Pages/Account the Login.cshtml.cs handles user logins
-            // SignInManager allows us to authenticate (login) as user asynchronously through the PasswordSIgnInAsync() method,
+            // SignInManager allows us to authenticate (login) as user asynchronously through the PasswordSignInAsync() method,
             // this begins the session
 
             // Areas/Identity/Pages/Account the Logout.cshtml.cs handles user logouts
