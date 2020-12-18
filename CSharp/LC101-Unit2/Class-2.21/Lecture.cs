@@ -113,7 +113,7 @@ namespace Class_2._21
             // How is this representation presented to your clients? Via HTTP responses
             // using mostly JSON.
 
-            // 22.2.3 Transferring a Representation of State¶
+            // 22.2.3 Transferring a Representation of State
             // It is up to the API to define the contract, or expose:
 
             // The types of state, or resources, the client can interact with
