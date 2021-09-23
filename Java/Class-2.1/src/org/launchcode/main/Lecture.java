@@ -35,7 +35,8 @@ public class Lecture {
 		System.out.println(str.charAt(3));
 		System.out.println(str.substring(2, 4));
 		System.out.println(str.length());
-		System.out.println(str.indexOf('a',str.indexOf('a')+1));
+		int startIndex = (str.indexOf('a')+1);
+		System.out.println(str.indexOf('a', startIndex));
 
 		System.out.println("2.1.3. Primitive Types");
 		int answerToAllThings = 42;

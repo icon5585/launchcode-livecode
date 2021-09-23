@@ -1,6 +1,7 @@
 package org.launchcode.main;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -282,8 +283,8 @@ public class Lecture {
 		double avg = sum / students.size();
 		System.out.println("Average grade: " + avg);
 
-		System.out.println("3.4.2. ArrayList Methods");
-		ArrayList<String> planets = new ArrayList<>();
+		System.out.println("3.4.2. ArrayList Methods");	
+		List<String> planets = new ArrayList<>();
 		planets.add("Mercury");
 		planets.add("Venus");
 		planets.add("Earth");
@@ -308,6 +309,14 @@ public class Lecture {
 		// Arraylist -> array
 		String[] planetsArray = new String[planets.size()]; // Arrays have to be of the correct size
 		planets.toArray(planetsArray);
+		
+		// Create and populate array list in one line
+		List<String> places = Arrays.asList("Buenos Aires", "Córdoba", "La Plata");
+		
+		List<Integer> intsFun = Arrays.asList(5,6,7);
+		
+		// Multi-dimension arrays
+		int[][] stuff = new int[5][5];
 	}
 
 	/**
