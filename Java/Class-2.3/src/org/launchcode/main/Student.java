@@ -12,8 +12,8 @@ public class Student {
 	private double gpa = 0.0;
 
 	// Default constructor (boring)
+	// Not required!
 	public Student() {
-
 	}
 
 	// 4.4.1 Overloading constructors
