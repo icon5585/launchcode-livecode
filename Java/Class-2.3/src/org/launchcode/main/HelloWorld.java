@@ -1,5 +1,6 @@
 package org.launchcode.main;
 
+// 4.1.1 Minimal Class
 public class HelloWorld {
 
 	// This variable is public, therefore accessible to anyone!
@@ -21,9 +22,11 @@ public class HelloWorld {
 	public void sayHello() {
 		String message = "Goodbye World";
 
+		// 4.1.2 The this keyword
+		
 		// Goodbye
 		System.out.println(message);
-
+		
 		// This refers to "this" class or things in "this" class
 		// in this class the message variable above
 		// Hello
@@ -33,6 +36,8 @@ public class HelloWorld {
 	/**
 	 * Package-private say hello
 	 */
+	// 4.2.1 Access Modifiers
+	// This method is package-private (default in Java)
 	void sayHelloDefaultAccessLevel() {
 		// This is not public, anything not in the same package,
 		// in this case (org.launchcode.main) cannot see this method
