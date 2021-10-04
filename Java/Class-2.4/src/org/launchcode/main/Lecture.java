@@ -3,7 +3,7 @@ package org.launchcode.main;
 public class Lecture {
 
 	/**
-	 * Class 2.4 - 1/15/2020 - Chapter 5 Classes and Objects Part 2 - Hank DeDona
+	 * Class 2.4 - Chapter 5 Classes and Objects Part 2 - Hank DeDona
 	 * 
 	 * @param args arguments passed into app at runtime
 	 */
