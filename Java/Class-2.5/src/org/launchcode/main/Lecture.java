@@ -3,7 +3,7 @@ package org.launchcode.main;
 public class Lecture {
 
 	/**
-	 * Class 2.5 - 1/22/2020 - Chapter 6 Unit Testing - Hank DeDona
+	 * Class 2.5 - Chapter 6 Unit Testing - Hank DeDona
 	 * 
 	 * @param args arguments passed into app at runtime
 	 */

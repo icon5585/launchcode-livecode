@@ -32,14 +32,7 @@ public class Lecture {
 		Temperature temp = new Temperature();
 		Temperature temp2 = new Temperature();
 		Temperature temp3 = new Temperature();
-		
-		// Don't do this
-		// Access static variables via the class, not the instance variable.
-		System.out.println(temp.absoluteZeroFahrenheit);
-		
-		// Do this
-		System.out.println(Temperature.absoluteZeroFahrenheit);
-		
+				
 		// If the static field is public, we can do this - This is the correct way,
 		// period.
 		System.out.println("Absolute zero in F is: " + Temperature.absoluteZeroFahrenheit);

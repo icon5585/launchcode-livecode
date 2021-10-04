@@ -6,7 +6,7 @@ import org.launchcode.main.cat.HouseCat;
 public class Lecture {
 
 	/**
-	 * Class 2.6 - 1/27/2020 - Chapter 7 - Inheritance - Hank DeDona
+	 * Class 2.6 - Chapter 7 - Inheritance - Hank DeDona
 	 * 
 	 * @param args arguments passed into app at runtime
 	 */
