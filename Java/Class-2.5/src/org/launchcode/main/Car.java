@@ -77,10 +77,15 @@ public class Car {
      * Add miles to odometer.
      *
      * @param miles - the miles to drive
+     * @throws IllegalAccessException 
      */
-    public void drive(double miles)
+    public void drive(double miles) throws IllegalAccessException
     {
-        //adjust fuel based on mpg and miles requested to drive
+        if(miles <= 0.0) {
+        	throw new IllegalAccessException("Miles driven must be a postive value!");
+        }
+    	
+    	//adjust fuel based on mpg and miles requested to drive
         double maxDistance = this.milesPerGallon * this.gasTankLevel;
         // This is called a ternary operator! --> if check ? if true do this : if false do this
         double milesAbleToTravel = miles > maxDistance ? maxDistance : miles;

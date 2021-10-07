@@ -16,6 +16,12 @@ import org.junit.runners.JUnit4;
 
 /**
  * Class for testing the {@link Car} class
+ *
+ * Note: In order to utilize this test class you will need to include the junit and hamcrest-core 
+ * libraries in your classpath
+ * 
+ * https://search.maven.org/artifact/junit/junit/4.13.2/jar
+ * https://search.maven.org/artifact/org.hamcrest/hamcrest-core/1.3/jar
  * 
  * @author Hank DeDona
  *
@@ -72,7 +78,7 @@ public class CarTest {
 	// Check that the constructor sets gasTankLevel properly
 	@Test
 	public void testInitialGasTank() {
-		assertEquals(10, testCar.getGasTankLevel(), .001);
+		assertEquals(10, testCar.getGasTankLevel(), 0);
 	}
 
 	// Check that the initial gas tank level is not 0
@@ -89,17 +95,17 @@ public class CarTest {
 
 	// Checks that gasTankLevel is accurate after driving within tank range
 	@Test
-	public void testGasTankAfterDriving() {
+	public void testGasTankAfterDriving() throws IllegalAccessException {
 		testCar.drive(50);
-		assertEquals(9, testCar.getGasTankLevel(), .001);
+		assertEquals(9, testCar.getGasTankLevel(), 0);
 	}
 
 	// Checks that gasTankLevel is accurate after attempting to drive past tank
 	// range
 	@Test
-	public void testGasTankAfterExceedingTankRange() {
+	public void testGasTankAfterExceedingTankRange() throws IllegalAccessException {
 		testCar.drive(501);
-		assertEquals(testCar.getGasTankLevel(), 0, .001);
+		assertEquals(testCar.getGasTankLevel(), 0, 0);
 	}
 
 	// Can't have more gas than tank size, expect an exception
