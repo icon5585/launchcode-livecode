@@ -6,7 +6,7 @@ import org.launchcode.main.cat.HouseCat;
 public class Lecture {
 
 	/**
-	 * Class 2.6 - 1/29/2020 - Chapter 8 - Interfaces & Polymorphism - Hank DeDona
+	 * Class 2.7 - Chapter 8 - Interfaces & Polymorphism - Hank DeDona
 	 * 
 	 * @param args arguments passed into app at runtime
 	 */
