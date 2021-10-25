@@ -74,7 +74,7 @@ public class Lecture {
 		// Another example
 		List<String> emptyList = new ArrayList<>();
 		
-		// Throw an example if a list is empty (which it is, since we just instantiated it above)
+		// Throw an exception if a list is empty (which it is, since we just instantiated it above)
 		if(emptyList.isEmpty()) {
 			throw new IllegalArgumentException("List cannot be empty!");
 		}
