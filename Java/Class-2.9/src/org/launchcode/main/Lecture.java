@@ -6,7 +6,7 @@ import java.util.List;
 public class Lecture {
 
 	/**
-	 * Class 2.9 - 2/5/2020 - Chapter X - Gradle & Exceptions - Hank DeDona
+	 * Class 2.9 - Chapter X - Gradle & Exceptions - Hank DeDona
 	 * 
 	 * @param args arguments passed into app at runtime
 	 */
