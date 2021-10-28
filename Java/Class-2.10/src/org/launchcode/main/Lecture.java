@@ -2,7 +2,7 @@ package org.launchcode.main;
 
 public class Lecture {
 	/**
-	 * Class 2.10 - 2/10/2020 - Chapter 11 - Thymeleaf - Hank DeDona
+	 * Class 2.10 - Chapter 11 - Thymeleaf - Hank DeDona
 	 * 
 	 * @param args arguments passed into app at runtime
 	 */
