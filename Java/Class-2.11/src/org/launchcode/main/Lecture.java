@@ -2,7 +2,7 @@ package org.launchcode.main;
 
 public class Lecture {
 	/**
-	 * Class 2.11 - 2/12/2020 - Chapter 12 - Models & Model Binding - Hank DeDona
+	 * Class 2.11 - Chapter 12 - Models & Model Binding - Hank DeDona
 	 * 
 	 * @param args arguments passed into app at runtime
 	 */

@@ -138,9 +138,9 @@ public class Lecture {
 		// 11.9.2 Adding Bootstrap to your project...
 		// https://www.bootstrapcdn.com
 		
-		// Note: Latest version as of 2/9/2020 is 4.4.1 and you need both their CSS and JS files!
-		// <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-		// <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+		// Note: Latest version as of 10/28/2021 is 5.1.3 and you need both their CSS and JS files!
+		// <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
+		// <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
 		
 		// Almost everything with bootstrap is based of CSS classes 
 		
@@ -152,6 +152,5 @@ public class Lecture {
 		
 		// There are numerous other CSS classes in bootstrap: table, btn, btn-success, nav-link, form-group, form-control, etc
 		// Refer to the html classes for some examples
-		
 	}
 }
