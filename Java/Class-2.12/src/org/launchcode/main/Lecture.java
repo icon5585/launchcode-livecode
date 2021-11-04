@@ -3,7 +3,7 @@ package org.launchcode.main;
 public class Lecture {
 
 	/**
-	 * Class 2.12 - 2/17/2020 - Chapter 13 & 14 - Models Validation & Enums - Hank DeDona
+	 * Class 2.12 - Chapter 13 & 14 - Models Validation & Enums - Hank DeDona
 	 * 
 	 * @param args arguments passed into app at runtime
 	 */

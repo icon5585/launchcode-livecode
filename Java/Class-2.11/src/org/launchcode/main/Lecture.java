@@ -54,7 +54,7 @@ public class Lecture {
 		// Allowing spring to create a Model object on form submission.
 		
 		// This uses a new annotation, @ModelAttribute 
-		// Refer to EventController.processCreateEventForm() - 
+		// Refer to EventController.processCreateEventForm()
 		
 		// What is going on here is that Spring is automatically calling the constructor of the Event class for us
 		// Your form value names MUST match the names of the variables in your Model Java classes!
