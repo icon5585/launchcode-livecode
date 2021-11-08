@@ -129,6 +129,8 @@ public class Lecture {
 			String stuffToSave = input.nextLine();
 			System.out.print("How would you like to save it? 1 for flat file, 2 for database: ");
 			Integer choice = input.nextInt();
+
+			input.close();
 			
 			// Note: We might not actually give the user a choice, we might swap out the
 			// saveable implementation without them knowing. This will become more evident when we talk
@@ -144,14 +146,10 @@ public class Lecture {
 				break;
 			}
 			default:
-				input.close();
 				throw new IllegalArgumentException("Unexpected value: " + choice);
 			}
 			
 			saver.saveStuff(stuffToSave);
-			
-			input.close();
-			
 		}
 	}
 	
