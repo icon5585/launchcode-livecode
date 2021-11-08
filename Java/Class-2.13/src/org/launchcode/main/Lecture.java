@@ -60,34 +60,7 @@ public class Lecture {
 		// we can store all of these in a single collection (list) of Animals and call methods that
 		// are present in Animal that must be implemented in Cat and Dog!
 		// See Animal.java, Cat.java, and Dog.java
-
-		List<Animal> animals = new ArrayList<>();
-		animals.add(new Cat());
-		animals.add(new Dog());
-
-		// Should say meow and woof in that order :)
-		// Note: This is a Java lambda expression, shorthand for a for-each loop in this
-		// case
-		animals.stream().forEach(a -> a.animalSound());
-
-		// Polymorphism
-		// Since Cat and Dog both inherit from Animal
-		for (Animal animal : animals) {
-			// Animal -> Cat
-			if (animal instanceof Cat) {
-				Cat cat = ((Cat) animal);
-
-				// Should say "nom, lasagna!"
-				cat.eatLasagna();
-			}
-			// Animal -> Dog
-			else if (animal instanceof Dog) {
-				Dog dog = ((Dog) animal);
-
-				// Should say "I'm gonna get the squirrel!";
-				dog.chaseSquirrel();
-			}
-		}
+		showOffPolymorphism();
 
 		// Interfaces vs abstract classes
 
@@ -118,10 +91,39 @@ public class Lecture {
 
 	}
 
+	private static void showOffPolymorphism() {
+		List<Animal> animals = new ArrayList<>();
+		animals.add(new Cat());
+		animals.add(new Dog());
+
+		// Should say meow and woof in that order :)
+		// Note: This is a Java lambda expression, shorthand for a for-each loop in this
+		// case
+		animals.stream().forEach(a -> a.animalSound());
+
+		// Polymorphism
+		// Since Cat and Dog both inherit from Animal
+		for (Animal animal : animals) {
+			// Animal -> Cat
+			if (animal instanceof Cat) {
+				Cat cat = ((Cat) animal);
+
+				// Should say "nom, lasagna!"
+				cat.eatLasagna();
+			}
+			// Animal -> Dog
+			else if (animal instanceof Dog) {
+				Dog dog = ((Dog) animal);
+
+				// Should say "I'm gonna get the squirrel!";
+				dog.chaseSquirrel();
+			}
+		}
+	}
+	
 	private static void showOffInterfaces() {
 		{
 			// Doing some awesome code here
-			
 			Scanner input = new Scanner(System.in);
 			System.out.print("Give me some stuff to save: ");
 			String stuffToSave = input.nextLine();
