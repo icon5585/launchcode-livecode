@@ -127,9 +127,8 @@ public class Lecture {
 			Scanner input = new Scanner(System.in);
 			System.out.print("Give me some stuff to save: ");
 			String stuffToSave = input.nextLine();
-			System.out.print("How would you like to save it? 1 for flat file, 2 for database");
+			System.out.print("How would you like to save it? 1 for flat file, 2 for database: ");
 			Integer choice = input.nextInt();
-			
 			
 			// Note: We might not actually give the user a choice, we might swap out the
 			// saveable implementation without them knowing. This will become more evident when we talk
