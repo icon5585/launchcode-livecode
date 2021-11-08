@@ -6,7 +6,6 @@ public class DatabaseSaver implements Saveable {
 	public void saveStuff(String stuff) {
 		System.out.println("Saving stuff to a database!");
 		System.out.println("Stuff: " + stuff);
-
 	}
 
 }
