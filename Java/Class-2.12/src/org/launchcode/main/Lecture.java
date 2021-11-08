@@ -141,6 +141,7 @@ public class Lecture {
 		
 		// 14.2.2.4 - Passing enum values to the controller
 		// Using the Enum method values() returns a collection of all possible enum values
+		// Day[] allDays = Day.values();
 		
 		// 14.2.2.5 - Using enum values in select statement
 		// Now that we've passed all of the possible enums in, we can use them in our thymeleaf template

@@ -14,7 +14,7 @@ public enum Day {
 	   private final boolean weekday;
 
 	   // Note: The constructor is NOT public because it's only called from within the enum class
-	   Day (String displayName, boolean weekday) {
+	   private Day (String displayName, boolean weekday) {
 	      this.displayName = displayName;
 	      this.weekday = weekday;
 	   }
