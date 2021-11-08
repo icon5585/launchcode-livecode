@@ -34,36 +34,28 @@ public class Lecture {
 
 		// Encapsulation (Data Hiding)
 		// Combining the data with the methods for working on that data. Encapsulation
-		// is accomplished when each
-		// instance of a class maintains a private state. Instead of being able to
-		// modify this state, in the form
-		// of private variables/properties, they can only be access and manipulated
-		// (setters/getters) via
-		// public functions available to users.
+		// is accomplished when each instance of a class maintains a private state. Instead of being able to
+		// modify this state, in the form of private variables/properties, they can only be access and manipulated
+		// (setters/getters) via public functions available to users.
 
 		// Abstraction (Implementation Hiding)
 		// The process of reducing the object to its essence so that only the necessary
-		// data
-		// is exposed to the users. Through the use of interfaces, you can abstract out
-		// the
-		// implementation completely.
+		// data is exposed to the users. Through the use of interfaces, you can abstract out
+		// the implementation completely.
 		// Note: Both abstract classes and interfaces are used for abstraction!
 
 		// Inheritance
 		// The ability of one object to acquire some/all properties of another object.
-		// You can reuse the variables/properties
-		// and methods of the existing class by inheriting it (extending). This enforces
-		// the DRY (don't repeat yourself)
+		// You can reuse the variables/properties and methods of the existing class 
+		// by inheriting it (extending). This enforces the DRY (don't repeat yourself)
 		// principle and reduces code duplication.
 
 		// Polymorphism
 		// Allows us to use a class exactly like its parent so there is no confusion
 		// with mixing types.
 		// E.g. If we have a parent class of Animal, with child classes of Cat and Dog,
-		// we can store
-		// all of these in a single collection (list) of Animals and call methods that
-		// are present in Animal
-		// that must be implemented in Cat and Dog!
+		// we can store all of these in a single collection (list) of Animals and call methods that
+		// are present in Animal that must be implemented in Cat and Dog!
 		// See Animal.java, Cat.java, and Dog.java
 
 		List<Animal> animals = new ArrayList<>();
@@ -76,8 +68,7 @@ public class Lecture {
 		animals.stream().forEach(a -> a.animalSound());
 
 		// Polymorphism
-		// Since Cat and Dog both inherit from
-
+		// Since Cat and Dog both inherit from Animal
 		for (Animal animal : animals) {
 			// Animal -> Cat
 			if (animal instanceof Cat) {
@@ -108,10 +99,8 @@ public class Lecture {
 		// Abstract classes
 		// An abstract class may or may not have all abstract methods. Some of them can
 		// be concrete methods (implementations) where the method signature and body are
-		// provided.
-		// Abstract classes can also have constructors (which are called by child
-		// classes), that interfaces
-		// cannot have.
+		// provided. Abstract classes can also have constructors (which are called by child
+		// classes), that interfaces cannot have.
 		// See Animal.java
 
 		// When to use an abstract class Vs. interface
