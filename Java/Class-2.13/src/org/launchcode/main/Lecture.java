@@ -14,11 +14,14 @@ import org.launchcode.main.files.Saveable;
 public class Lecture {
 
 	/**
-	 * Class 2.13 - Catchup - Inheritance and Polymorphism! - Hank DeDona
+	 * Class 2.13 - Catchup/Review - Inheritance and Polymorphism - Hank DeDona
 	 * 
 	 * @param args arguments passed into app at runtime
 	 */
 	public static void main(String[] args) {
+		// Great YouTube video explaining the 4 pillars of OOP
+		// https://www.youtube.com/watch?v=1ONhXmQuWP8
+		
 		// Inheritance and Polymorphism
 
 		// Define difference between Class and Instance
