@@ -32,9 +32,9 @@ public class Lecture {
 		// CRUD - Create, read, update and delete
 		
 		// 15.2.1.1 - Create a table
-		// This example creates a table called li_wedding with an integer, 3 strings, and a boolean
+		// This example creates a table called johnson_wedding with an integer, 3 strings, and a boolean
 		/*
-		 * CREATE TABLE li_wedding (
+		 * CREATE TABLE johnson_wedding (
 			   guest_id INT,
 			   last_name VARCHAR(255),
 			   first_name VARCHAR(255),
@@ -72,7 +72,7 @@ public class Lecture {
 		// If you want to add more data types to a column (similar to adding a new variable to an object class) we use the ALTER TABLE query
 		
 		/*
-		 * ALTER TABLE li_wedding
+		 * ALTER TABLE johnson_wedding
 			ADD can_drink BOOL;	
 		 */
 		
@@ -90,14 +90,14 @@ public class Lecture {
 		// Note: You can also use AND/OR in your conditional WHERE clause 
 		/*
 		 * SELECT last_name, first_name
-			FROM li_wedding
+			FROM johnson_wedding
 			WHERE (attending = 1) AND (diet = "vegetarian");
 		 */
 		
 		// If you want to select ALL fields from a table, you can use the *
 		/*
 		 * SELECT *
-			FROM li_wedding;
+			FROM johnson_wedding;
 		 */
 		
 		//15.2.3. Update
@@ -105,7 +105,7 @@ public class Lecture {
 		
 		// We UPDATE a specific table and SET values WHERE some conditions are true
 		// Note: You can set multiple column values at once
-		
+		// Note 2: In order to do this in MySQLWorkbench, you may need to disable safe mode!
 		/*
 		 * UPDATE johnson_vow_renewal
 			SET diet="vegetarian", first_name="Elizabeth"
