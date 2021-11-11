@@ -3,7 +3,7 @@ package org.launchcode.main;
 public class Lecture {
 
 	/**
-	 * Class 2.15 - 2/26/2020 - Chapter 16 - SQL Part Deux - Hank DeDona
+	 * Class 2.15 - Chapter 16 - SQL Part Deux - Hank DeDona
 	 * 
 	 * @param args arguments passed into app at runtime
 	 */
