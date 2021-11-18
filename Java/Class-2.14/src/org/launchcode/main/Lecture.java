@@ -100,7 +100,7 @@ public class Lecture {
 			FROM johnson_wedding;
 		 */
 		
-		//15.2.3. Update
+		// 15.2.3. Update
 		// When you want to change existing data in a database, we use the UPDATE statement 
 		
 		// We UPDATE a specific table and SET values WHERE some conditions are true

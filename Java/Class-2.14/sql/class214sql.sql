@@ -6,6 +6,7 @@ CREATE TABLE johnson_wedding (
 			   attending BOOL,
 			   diet VARCHAR(255)
 			);
+
 COMMIT;
 
 # Not used very often, but you can create a new table with data from another table
