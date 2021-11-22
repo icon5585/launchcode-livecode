@@ -63,6 +63,14 @@ public class ContactInfoController {
 			readAndUpdateFrank();
 		} else if (crudOperation.equalsIgnoreCase("delete")) {
 			readAndDeleteFrank();
+		} else if(crudOperation.equalsIgnoreCase("read")) {
+			Optional<ContactInfo> optionalFrank = repo.findById(1); // Find frank in the MySQL DB first
+			
+			if(optionalFrank.isPresent()) {
+				return optionalFrank.get().toString();
+			} else {
+				return "Frank not found!";
+			}
 		}
 
 		return "Done";
