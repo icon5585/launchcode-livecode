@@ -3,7 +3,7 @@ package org.launchcode.class26;
 public class Lecture {
 	
 	/**
-	 * Class 2.16 - 3/2/2020 - Chapter 17 - Object-Relational Mapping (ORM)
+	 * Class 2.16 - Chapter 17 - Object-Relational Mapping (ORM)
 	 * Hank DeDona
 	 * 
 	 * @param args arguments passed into app at runtime
