@@ -3,7 +3,7 @@ package org.launchcode.main;
 public class Lecture {
 
 	/**
-	 * Class 2.18 - 3/9/2020 - Chapter 18.4 & 18.5 - Relationships in ORM Part 2
+	 * Class 2.18 - Chapter 18.4 & 18.5 - Relationships in ORM Part 2
 	 * 
 	 * Hank DeDona
 	 * 

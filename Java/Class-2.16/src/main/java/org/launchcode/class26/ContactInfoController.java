@@ -32,7 +32,7 @@ public class ContactInfoController {
 			ContactInfo frank = optionalFrank.get();
 
 			// Update his email
-			frank.setEmail("franksnewemail@gamil.com");
+			frank.setEmail("franksnewemail@gmail.com");
 
 			// Save (UPDATE)
 			repo.save(frank);

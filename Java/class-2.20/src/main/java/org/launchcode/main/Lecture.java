@@ -3,7 +3,7 @@ package org.launchcode.main;
 public class Lecture {
 
 	/**
-	 * Class 2.20 - 3/16/2020 - Chapter 20 - REST
+	 * Class 2.20 - Chapter 20 - REST
 	 * 
 	 * Hank DeDona
 	 * 

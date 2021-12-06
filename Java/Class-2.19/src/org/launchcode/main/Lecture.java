@@ -3,7 +3,7 @@ package org.launchcode.main;
 public class Lecture {
 
 	/**
-	 * Class 2.19 - 3/11/2020 - Chapter 19 - Authentication
+	 * Class 2.19 - Chapter 19 - Authentication
 	 * 
 	 * Hank DeDona
 	 * 
