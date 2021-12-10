@@ -1,4 +1,4 @@
-package org.launchcode.main;
+package org.launchcode.class20.main;
 
 public class Lecture {
 
