@@ -45,7 +45,7 @@ public class Lecture {
 		
 		// 19.1.3 - Spring security
 		// Spring security handles a lot of different authentication/authorization functionality, but is complicated and outside the 
-		// scope of this bootcamp.
+		// scope of this boot camp.
 	}
 	
 	private static void section19_2() {
