@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  * 
  * @author Hank DeDona
  */
-@RestController
+@RestController		// Convenience annotation that combines @Controller and @ResponseBody
 public class CustomerController {
 
 	/**
